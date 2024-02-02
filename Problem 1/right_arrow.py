@@ -4,12 +4,23 @@ def right_arrow():
 
     row1 = '      ' + head_char
     ''' Type your code here. '''
+    row1 = head_char
+    row2 = head_char + head_char
+    row3 = head_char + head_char + head_char
+    lines = [row1, row2, row3]
+    lineNumber = 0
+    maxLength = 0
+    base = base_char + base_char + base_char + base_char + base_char
+    amountOfBase = 0
 
-    print(row1)
-    print(row2)
-    print(row3)
-    print(row2)
-    print(row1)
+    while amountOfBase < 5:
+        print(base + lines[lineNumber])
+        if lineNumber < 2 and maxLength < 2:
+            lineNumber = lineNumber + 1 
+            maxLength = maxLength + 1
+        else:
+            lineNumber = lineNumber - 1
+        amountOfBase = amountOfBase + 1
 
 if __name__ == "__main__":
     right_arrow()
