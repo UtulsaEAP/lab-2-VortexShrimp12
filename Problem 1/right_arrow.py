@@ -10,10 +10,13 @@ def right_arrow():
     lines = [row1, row2, row3]
     lineNumber = 0
     maxLength = 0
-    base = base_char + base_char + base_char + base_char + base_char
     amountOfBase = 0
 
     while amountOfBase < 5:
+        if amountOfBase < 1:
+            base = "      "
+        else:
+            base = base_char + base_char + base_char + base_char + base_char + base_char
         print(base + lines[lineNumber])
         if lineNumber < 2 and maxLength < 2:
             lineNumber = lineNumber + 1 

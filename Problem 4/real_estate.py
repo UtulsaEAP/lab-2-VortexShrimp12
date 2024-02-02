@@ -8,7 +8,7 @@ def real_estate():
     mortgage = (current_price * 0.051) / 12.
 
     print("This house is $" + str(current_price) +". The change is $"+ str(changeInPrice) +" since last month.")
-    print("The estimated monthly mortgage is $" + str(mortgage) +".")  
+    print("The estimated monthly mortgage is $" + str(f'{mortgage:.2f}') +".")  
    
 if __name__ == "__main__":
     real_estate()
